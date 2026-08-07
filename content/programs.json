@@ -2,12 +2,12 @@
   "pageIntro": {
     "eyebrow": "Programs",
     "title": "Programs we are building for students now and next.",
-    "description": "Free Code Juniors currently offers one active program and is preparing a second course focused on Python and stronger AI prompting skills."
+    "description": "Free Code Juniors currently offers active programs in block coding, AI inferencing, Python fundamentals, and stronger AI prompting skills."
   },
   "sectionIntro": {
     "eyebrow": "Programs",
     "title": "Current and upcoming learning experiences.",
-    "description": "Our current focus is building a strong foundation in block coding and AI inferencing while preparing a combined Python and intermediate prompting course."
+    "description": "Our current programs build a strong foundation in block coding, AI inferencing, Python fundamentals, and intermediate prompting skills."
   },
   "programs": [
     {
@@ -26,12 +26,12 @@
       "icon": "python",
       "title": "Intro to Python and Intermediate Prompting Skills",
       "description": "Students will learn Python fundamentals alongside intermediate prompting skills that strengthen problem solving, logic, and effective use of AI tools.",
-      "recommendedAge": "Coming Soon",
-      "duration": "Coming Soon",
-      "skillLevel": "Coming Soon",
+      "recommendedAge": "Contact Us!",
+      "duration": "Current Program",
+      "skillLevel": "Intermediate",
       "image": "/images/poster.jpg",
       "badgeImage": "/images/python-logo.webp",
-      "imagePlaceholderText": "Coming soon!"
+      "imagePlaceholderText": "Available Now!"
     }
   ]
 }

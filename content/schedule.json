@@ -12,20 +12,21 @@
   "items": [
     {
       "program": "Introduction to Block Coding in Scratch and AI Inferencing",
-      "day": "July 26, Sunday",
-      "time": "10:00 AM - 11:30 AM",
+      "day": "August 16, Sunday",
+      "time": "2:00 PM - 3:00 PM",
       "place": "NSU Alvin Sherman Library",
       "instructor": "Andrew Chen",
       "availability": "Join Group",
       "availabilityHref": "/join-group"
     },
     {
-      "program": "Coming Soon",
-      "day": "Coming Soon",
-      "time": "Coming Soon",
-      "place": "Coming Soon",
-      "instructor": "Coming Soon",
-      "availability": "Coming Soon"
+      "program": "Intro to Python and Intermediate Prompting Skills",
+      "day": "August 16, Sunday",
+      "time": "2:00 PM - 3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "Zibo Nie",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
     },
     {
       "program": "Coming Soon",
