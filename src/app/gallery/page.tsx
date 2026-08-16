@@ -45,7 +45,7 @@ export default function GalleryPage() {
                       <p className="text-sm leading-7 text-slate-600">{event.description}</p>
                     </div>
                   </article>
-                </Link>
+                </Link> 
               </Reveal>
             ))}
           </div>
