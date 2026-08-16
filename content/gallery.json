@@ -112,6 +112,27 @@
           "caption": "A final lesson clip showing the real-time rhythm of the June session."
         }
       ]
+    },
+    {
+      "id": "july-26-session",
+      "title": "July 26 Session",
+      "description": "The third FCJ meeting shows clear growth across the program, with more instructors supporting the room, more kids participating, and a stronger sense of shared momentum around the work.",
+      "date": "July 26",
+      "location": "Session Gallery",
+      "coverImage": "/gallery/july-26-session/cover.jpg",
+      "images": [
+        {
+          "src": "/gallery/july-26-session/1.jpg",
+          "alt": "Instructors and students gathered together during the July 26 Free Code Juniors session.",
+          "caption": "By the third meeting, FCJ had grown into a larger team effort, with more instructors, more kids, and stronger participation visible in one frame."
+        },
+        {
+          "src": "/gallery/july-26-session/2.jpg",
+          "alt": "A student standing beside the Free Code Juniors welcome sign during the July 26 session.",
+          "caption": "This moment reflects the confidence and consistency building around FCJ as students showed up ready to be part of a growing learning community."
+        }
+      ],
+      "videos": []
     }
   ]
 }
