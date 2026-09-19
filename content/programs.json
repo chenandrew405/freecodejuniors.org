@@ -2,19 +2,19 @@
   "pageIntro": {
     "eyebrow": "Programs",
     "title": "Programs we are building for students now and next.",
-    "description": "Free Code Juniors currently offers active programs in block coding, AI inferencing, Python fundamentals, and stronger AI prompting skills."
+    "description": "Free Code Juniors currently offers active programs in Scratch fundamentals and Python fundamentals."
   },
   "sectionIntro": {
     "eyebrow": "Programs",
     "title": "Current and upcoming learning experiences.",
-    "description": "Our current programs build a strong foundation in block coding, AI inferencing, Python fundamentals, and intermediate prompting skills."
+    "description": "Our current programs build a strong foundation in Scratch fundamentals and Python fundamentals."
   },
   "programs": [
     {
-      "id": "scratch-ai-inferencing",
+      "id": "scratch-fundamentals",
       "icon": "scratch-cat",
-      "title": "Introduction to Block Coding in Scratch and AI Inferencing",
-      "description": "Students begin with block coding in Scratch while learning how AI inferencing works through guided, beginner-friendly projects.",
+      "title": "Scratch Fundamentals",
+      "description": "Students begin with Scratch fundamentals through guided, beginner-friendly projects that build creativity, sequencing, and problem-solving.",
       "recommendedAge": "5+",
       "duration": "Current program",
       "skillLevel": "Beginner",
@@ -22,13 +22,13 @@
       "badgeImage": "/images/scratch-logo-transparent.png"
     },
     {
-      "id": "python-prompting-skills",
+      "id": "python-fundamentals",
       "icon": "python",
-      "title": "Intro to Python and Intermediate Prompting Skills",
-      "description": "Students will learn Python fundamentals alongside intermediate prompting skills that strengthen problem solving, logic, and effective use of AI tools.",
+      "title": "Python Fundamentals",
+      "description": "Students learn Python fundamentals through beginner-friendly lessons that build logic, problem-solving, and confidence with core coding concepts.",
       "recommendedAge": "Contact Us!",
-      "duration": "Current Program",
-      "skillLevel": "Intermediate",
+      "duration": "Current program",
+      "skillLevel": "Beginner",
       "image": "/images/poster.jpg",
       "badgeImage": "/images/python-logo.webp",
       "imagePlaceholderText": "Available Now!"

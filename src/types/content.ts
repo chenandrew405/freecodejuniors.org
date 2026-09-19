@@ -48,8 +48,10 @@ export interface SectionIntro {
 export interface TeamMember {
   name: string;
   role: string;
+  profileRole: string;
   bio: string;
   image?: string | null;
+  imagePosition?: string | null;
   email?: string | null;
   phone?: string | null;
 }
@@ -77,6 +79,8 @@ export interface AboutContent {
     title: string;
     description: string;
     members: TeamMember[];
+    instructors: TeamMember[];
+    teacherAssistants: TeamMember[];
   };
 }
 

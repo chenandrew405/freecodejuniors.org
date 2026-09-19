@@ -40,8 +40,10 @@ const sectionIntroSchema = z.object({
 const teamMemberSchema: z.ZodType<TeamMember> = z.object({
   name: z.string().min(1),
   role: z.string().min(1),
+  profileRole: z.string().min(1),
   bio: z.string().min(1),
   image: z.string().min(1).nullable().optional(),
+  imagePosition: z.string().min(1).nullable().optional(),
   email: z.string().min(1).nullable().optional(),
   phone: z.string().min(1).nullable().optional(),
 });
@@ -215,6 +217,8 @@ export const aboutSchema: z.ZodType<AboutContent> = z.object({
     title: z.string().min(1),
     description: z.string().min(1),
     members: z.array(teamMemberSchema).min(1),
+    instructors: z.array(teamMemberSchema).min(1),
+    teacherAssistants: z.array(teamMemberSchema).min(1),
   }),
 });
 

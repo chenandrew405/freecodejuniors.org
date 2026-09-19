@@ -39,24 +39,59 @@
     }
   ],
   "team": {
-    "title": "Student Instructors",
-    "description": "A student-led volunteer structure helps Free Code Juniors stay personal, welcoming, and community-centered.",
+    "title": "Leadership",
+    "description": "Free Code Juniors is led by co-founders who shape the curriculum, teach students, and help grow a welcoming instructor community.",
     "members": [
       {
         "name": "Andrew Chen",
-        "role": "Student Instructor",
-        "bio": "Creates the class materials and gives hands-on coding sessions.",
+        "role": "Co-Founder/Instructor",
+        "profileRole": "Co-Founder | Programs & Curriculum | Teaching Instructor",
+        "bio": "Andrew Chen is the Co-Founder of Free Code Juniors and a passionate programmer and robotics enthusiast. He is especially interested in machine learning and applying AI to science research. Andrew has participated in FIRST LEGO League (FLL) and earned recognition in state competitions.\n\nThrough Free Code Juniors, Andrew helps create fun, hands-on programming experiences for all ages by creating the core Python and Scratch content. He is committed to giving back to the community and inspiring kids to discover the joy of coding.\n\nAndrew also plays violin and enjoys sharing his love of music through community performances.",
         "image": "/images/zibo-nie.jpg",
         "email": "chenandrew405@gmail.com",
         "phone": "7543442298"
       },
       {
         "name": "Zibo Nie",
-        "role": "Student Instructor",
-        "bio": "Assists with teaching and provides much needed tech support to keep the class moving.",
+        "role": "Co-Founder/Instructor",
+        "profileRole": "Co-Founder | Programs & Curriculum | Teaching Instructor",
+        "bio": "Zibo is passionate about coding, robotics, and technology. As the Co-Founder of a youth coding initiative, he is committed to giving back to the community by providing free programming experiences and helping younger students discover the joy of coding.\n\nHe has experience with Python, FTC, and VEX Robotics and has edited and organized the Python course curriculum and teaching materials used in the program. He enjoys building projects, solving problems, and helping younger students learn through hands-on coding.\n\nBeyond technology, Zibo is a violist in the FYO Symphony Orchestra and enjoys playing tennis.",
         "image": "/images/andrew-chen.jpg",
         "email": "niezibo2011@gmail.com",
         "phone": "5616433791"
+      }
+    ],
+    "instructors": [
+      {
+        "name": "Leonardo Carvalho",
+        "role": "Director/Instructor",
+        "profileRole": "Director of Online Programs & Curriculum | Teaching Instructor",
+        "bio": "Leonardo \"Leo\" Carvalho is a high school student passionate about computer science, AI, robotics, and bioengineering. He has been coding from a young age, with experience in Java and Python, and has participated in robotics since fifth grade.\n\nHis recent projects include designing and simulating an AI-assisted knee exoskeleton for ACL rehabilitation, combining machine learning with robotic control.\n\nAs Director of Online Programs & Curriculum, Leo develops course materials and hands-on coding projects, leads virtual classes, and mentors younger students.\n\nOutside of technology, Leo is the founder of OCAPEX, a student-led community service organization.",
+        "image": "/images/leonardo-carvalho.jpg"
+      },
+      {
+        "name": "Leon Rao",
+        "role": "Teaching Instructor",
+        "profileRole": "Teaching Instructor",
+        "bio": "Leon has a strong interest in programming and robotics. He has participated in competitive robotics at multiple levels, including FIRST LEGO League (FLL), VEX IQ, FIRST Tech Challenge (FTC), and currently FIRST Robotics Competition (FRC).\n\nThrough his hands-on experience in robotics, Leon has developed and strengthened his programming skills in Python and Java, applying what he learns beyond the classroom to real-world, goal-driven challenges. He especially enjoys the problem-solving, teamwork, and creativity involved in designing and programming robots.\n\nLeon is excited to share his knowledge and enthusiasm with younger students and hopes to help them discover how fun and rewarding programming and robotics can be.\n\nOutside of robotics, Leon plays euphonium and trombone in concert and jazz bands. He is also an enthusiastic video gamer.",
+        "image": "/images/leon-rao.jpeg"
+      },
+      {
+        "name": "Christina Koyama",
+        "role": "Teaching Instructor",
+        "profileRole": "Teaching Instructor",
+        "bio": "Christina Koyama attends American Heritage School in Delray Beach. She is a member of the school's Mu Alpha Theta math team and enjoys participating in mathematics competitions. She also volunteers as a math tutor at American Heritage, helping fellow students with math.\n\nChristina has completed Python programming training through X-Camp, where she developed an interest in coding and problem-solving. In her free time, she enjoys music and plays both the piano and flute. She has had the opportunity to participate in many local and international music competitions, which have been valuable learning and rewarding experiences.\n\nMost of all, Christina enjoys learning new things, meeting new people, and making friends along the way. She looks forward to exploring new opportunities and continuing to grow both academically and personally.",
+        "image": "/images/christina-koyama.jpg"
+      }
+    ],
+    "teacherAssistants": [
+      {
+        "name": "Julie Kong",
+        "role": "Teaching Assistant",
+        "profileRole": "Teaching Assistant",
+        "bio": "Julie attends American Heritage School and enjoys community service and public speaking. She has hosted the 2026 Overseas Chinese Spring Festival Gala and serves as a volunteer emcee for music performances at local senior living communities.\n\nOutside of volunteering, Julie enjoys swimming, cheerleading, and horseback riding.",
+        "image": "/images/julie-kong.jpg",
+        "imagePosition": "center top"
       }
     ]
   }

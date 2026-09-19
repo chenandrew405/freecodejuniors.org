@@ -43,5 +43,16 @@ export const allContent: AllContent = {
   footer: footerContent,
 };
 
+export const getTeamMemberId = (name: string) =>
+  name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+export const teamMembers = [...aboutContent.team.members, ...aboutContent.team.instructors, ...aboutContent.team.teacherAssistants];
+
+export const getTeamMemberById = (memberId: string) =>
+  teamMembers.find((member) => getTeamMemberId(member.name) === memberId);
+
 export const getGalleryEventById = (eventId: string) =>
   galleryContent.events.find((event) => event.id === eventId);
