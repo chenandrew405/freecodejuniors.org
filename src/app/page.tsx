@@ -199,16 +199,16 @@ export default function HomePage() {
                         <h3 className="font-mono text-2xl font-semibold text-slate-950">{program.title}</h3>
                         <p className="mt-3 text-sm leading-6 text-slate-600">{program.description}</p>
                       </div>
-                      <div className="mt-auto flex flex-wrap gap-3 pt-1 text-sm text-slate-600">
-                        <div className="min-w-[9rem] flex-1 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                      <div className="mt-auto grid grid-cols-2 gap-3 pt-1 text-sm text-slate-600 sm:flex sm:flex-wrap">
+                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
                           <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Age</p>
                           <p className="mt-2 break-words leading-5 text-slate-700">{program.recommendedAge}</p>
                         </div>
-                        <div className="min-w-[9rem] flex-1 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
                           <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Duration</p>
                           <p className="mt-2 break-words leading-5 text-slate-700">{program.duration}</p>
                         </div>
-                        <div className="min-w-[9rem] flex-1 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
                           <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Level</p>
                           <p className="mt-2 break-words leading-5 text-slate-700">{program.skillLevel}</p>
                         </div>
