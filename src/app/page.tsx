@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 import { Container } from '@/components/shared/container';
+import { MobileScrollIndicator } from '@/components/shared/mobile-scroll-indicator';
 import { Reveal } from '@/components/shared/reveal';
 import { SectionHeader } from '@/components/shared/section-header';
 import { TerminalType } from '@/components/shared/terminal-type';
@@ -124,14 +125,17 @@ export default function HomePage() {
             </Reveal>
           </div>
 
-          <div className="layout-grid layout-grid-cols phone-scroll-row mt-10" style={getLayoutBoxStyle(homeHeroLayout.gridSecondary)}>
-            {heroContent.stats.map((stat) => (
-              <div key={stat.label} className="phone-scroll-card layout-card-size premium-card interactive-card flex min-h-[8rem] flex-col justify-between lg:min-h-[7rem]" style={getLayoutBoxStyle(homeHeroLayout.cardSecondary)}>
-                <p className="font-mono text-lg font-semibold text-slate-950">{stat.value}</p>
-                <p className="mt-2 text-sm font-medium text-slate-700">{stat.label}</p>
-                <p className="mt-2 text-sm leading-6 text-slate-500">{stat.description}</p>
-              </div>
-            ))}
+          <div className="relative mt-4 sm:mt-10">
+            <MobileScrollIndicator targetId="home-stats-scroll" />
+            <div className="layout-grid layout-grid-cols phone-scroll-row" id="home-stats-scroll" style={getLayoutBoxStyle(homeHeroLayout.gridSecondary)}>
+              {heroContent.stats.map((stat) => (
+                <div key={stat.label} className="phone-scroll-card layout-card-size premium-card interactive-card flex min-h-[8rem] flex-col justify-between lg:min-h-[7rem]" style={getLayoutBoxStyle(homeHeroLayout.cardSecondary)}>
+                  <p className="font-mono text-lg font-semibold text-slate-950">{stat.value}</p>
+                  <p className="mt-2 text-sm font-medium text-slate-700">{stat.label}</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-500">{stat.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
@@ -146,23 +150,26 @@ export default function HomePage() {
               title={aboutContent.pageIntro.title}
             />
           </Reveal>
-          <div className="layout-grid layout-grid-cols phone-scroll-row mt-10" style={getLayoutBoxStyle(homeAboutPreviewLayout.grid)}>
-            {[aboutContent.mission, aboutContent.vision].map((item, index) => (
-              <Reveal key={item.title} className="phone-scroll-card" delay={index * 0.08}>
-                <article className="layout-card-size premium-card interactive-card flex h-full flex-col" style={getLayoutBoxStyle(homeAboutPreviewLayout.card)}>
-                  <p className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-[#2563EB]">{siteContent.name}</p>
-                  <h3 className="mt-4 font-mono text-2xl font-semibold text-slate-950">{item.title}</h3>
-                  <p className="mt-4 flex-1 text-base leading-7 text-slate-600">{item.description}</p>
+          <div className="relative mt-4 sm:mt-10">
+            <MobileScrollIndicator targetId="home-about-scroll" />
+            <div className="layout-grid layout-grid-cols phone-scroll-row" id="home-about-scroll" style={getLayoutBoxStyle(homeAboutPreviewLayout.grid)}>
+              {[aboutContent.mission, aboutContent.vision].map((item, index) => (
+                <Reveal key={item.title} className="phone-scroll-card" delay={index * 0.08}>
+                  <article className="layout-card-size premium-card interactive-card flex h-full flex-col" style={getLayoutBoxStyle(homeAboutPreviewLayout.card)}>
+                    <p className="font-mono text-xs font-semibold uppercase tracking-[0.24em] text-[#2563EB]">{siteContent.name}</p>
+                    <h3 className="mt-4 font-mono text-2xl font-semibold text-slate-950">{item.title}</h3>
+                    <p className="mt-4 flex-1 text-base leading-7 text-slate-600">{item.description}</p>
+                  </article>
+                </Reveal>
+              ))}
+              <Reveal className="phone-scroll-card" delay={0.16}>
+                <article className="layout-card-size premium-card interactive-card flex h-full flex-col overflow-hidden" style={getLayoutBoxStyle(homeAboutPreviewLayout.card)}>
+                  <div className="relative h-full min-h-72 overflow-hidden rounded-[1.25rem]">
+                    <Image alt={aboutContent.storyImages[0]?.alt ?? ''} className="object-cover" fill sizes="30vw" src={aboutContent.storyImages[0]?.src ?? '/images/classroom.jpg'} />
+                  </div>
                 </article>
               </Reveal>
-            ))}
-            <Reveal className="phone-scroll-card" delay={0.16}>
-              <article className="layout-card-size premium-card interactive-card flex h-full flex-col overflow-hidden" style={getLayoutBoxStyle(homeAboutPreviewLayout.card)}>
-                <div className="relative h-full min-h-72 overflow-hidden rounded-[1.25rem]">
-                  <Image alt={aboutContent.storyImages[0]?.alt ?? ''} className="object-cover" fill sizes="30vw" src={aboutContent.storyImages[0]?.src ?? '/images/classroom.jpg'} />
-                </div>
-              </article>
-            </Reveal>
+            </div>
           </div>
         </Container>
       </section>
@@ -177,47 +184,50 @@ export default function HomePage() {
               title={programsContent.sectionIntro.title}
             />
           </Reveal>
-          <div className="layout-grid layout-grid-cols phone-scroll-row mt-10" style={getLayoutBoxStyle(homeProgramsPreviewLayout.grid)}>
-            {programsContent.programs.slice(0, 3).map((program, index) => {
-              return (
-                <Reveal key={program.id} className="phone-scroll-card" delay={index * 0.08}>
-                  <article className="layout-radius premium-card interactive-card overflow-hidden" style={getLayoutBoxStyle(homeProgramsPreviewLayout.card)}>
-                    <div className="relative aspect-[16/11] overflow-hidden bg-slate-100">
-                      {program.imagePlaceholderText ? (
-                        <div className="flex h-full items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.14),_transparent_58%),linear-gradient(180deg,_rgba(241,245,249,0.95),_rgba(226,232,240,0.9))] px-8 text-center">
-                          <p className="font-mono text-3xl font-semibold tracking-[0.12em] text-slate-500">{program.imagePlaceholderText}</p>
-                        </div>
-                      ) : (
-                        <Image alt={program.title} className="object-cover" fill sizes="(max-width: 1024px) 100vw, 33vw" src={program.image} />
-                      )}
-                    </div>
-                    <div className="layout-card-size flex h-full flex-col gap-5" style={getLayoutBoxStyle(homeProgramsPreviewLayout.cardSecondary)}>
-                      <div className="relative inline-flex size-12 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
-                        <Image alt="" aria-hidden="true" className="object-contain p-2" fill sizes="48px" src={program.badgeImage} />
+          <div className="relative mt-4 sm:mt-10">
+            <MobileScrollIndicator targetId="home-programs-scroll" />
+            <div className="layout-grid layout-grid-cols phone-scroll-row" id="home-programs-scroll" style={getLayoutBoxStyle(homeProgramsPreviewLayout.grid)}>
+              {programsContent.programs.slice(0, 3).map((program, index) => {
+                return (
+                  <Reveal key={program.id} className="phone-scroll-card" delay={index * 0.08}>
+                    <article className="layout-radius premium-card interactive-card overflow-hidden" style={getLayoutBoxStyle(homeProgramsPreviewLayout.card)}>
+                      <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 sm:aspect-[16/11]">
+                        {program.imagePlaceholderText ? (
+                          <div className="flex h-full items-center justify-center bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.14),_transparent_58%),linear-gradient(180deg,_rgba(241,245,249,0.95),_rgba(226,232,240,0.9))] px-8 text-center">
+                            <p className="font-mono text-3xl font-semibold tracking-[0.12em] text-slate-500">{program.imagePlaceholderText}</p>
+                          </div>
+                        ) : (
+                          <Image alt={program.title} className="object-cover" fill sizes="(max-width: 1024px) 100vw, 33vw" src={program.image} />
+                        )}
                       </div>
-                      <div>
-                        <h3 className="font-mono text-2xl font-semibold text-slate-950">{program.title}</h3>
-                        <p className="mt-3 text-sm leading-6 text-slate-600">{program.description}</p>
+                      <div className="layout-card-size flex h-full flex-col gap-4 sm:gap-5" style={getLayoutBoxStyle(homeProgramsPreviewLayout.cardSecondary)}>
+                        <div className="relative inline-flex size-12 items-center justify-center overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+                          <Image alt="" aria-hidden="true" className="object-contain p-2" fill sizes="48px" src={program.badgeImage} />
+                        </div>
+                        <div>
+                          <h3 className="font-mono text-2xl font-semibold text-slate-950">{program.title}</h3>
+                          <p className="mt-3 text-sm leading-6 text-slate-600">{program.description}</p>
+                        </div>
+                        <div className="mt-auto grid grid-cols-3 gap-2 pt-1 text-[11px] text-slate-600 sm:flex sm:flex-wrap sm:gap-3 sm:text-sm">
+                          <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-3 sm:min-w-[9rem] sm:flex-1 sm:p-4">
+                            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 sm:text-xs">Age</p>
+                            <p className="mt-2 break-words text-[0.78rem] leading-4 text-slate-700 sm:text-sm sm:leading-5">{program.recommendedAge}</p>
+                          </div>
+                          <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-3 sm:min-w-[9rem] sm:flex-1 sm:p-4">
+                            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 sm:text-xs">Duration</p>
+                            <p className="mt-2 break-words text-[0.78rem] leading-4 text-slate-700 sm:text-sm sm:leading-5">{program.duration}</p>
+                          </div>
+                          <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-3 sm:min-w-[9rem] sm:flex-1 sm:p-4">
+                            <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 sm:text-xs">Level</p>
+                            <p className="mt-2 break-words text-[0.78rem] leading-4 text-slate-700 sm:text-sm sm:leading-5">{program.skillLevel}</p>
+                          </div>
+                        </div>
                       </div>
-                      <div className="mt-auto grid grid-cols-2 gap-3 pt-1 text-sm text-slate-600 sm:flex sm:flex-wrap">
-                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
-                          <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Age</p>
-                          <p className="mt-2 break-words leading-5 text-slate-700">{program.recommendedAge}</p>
-                        </div>
-                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
-                          <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Duration</p>
-                          <p className="mt-2 break-words leading-5 text-slate-700">{program.duration}</p>
-                        </div>
-                        <div className="min-w-0 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4 sm:min-w-[9rem] sm:flex-1">
-                          <p className="font-mono text-xs uppercase tracking-[0.2em] text-slate-400">Level</p>
-                          <p className="mt-2 break-words leading-5 text-slate-700">{program.skillLevel}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
+                    </article>
+                  </Reveal>
+                );
+              })}
+            </div>
           </div>
         </Container>
       </section>
@@ -248,21 +258,59 @@ export default function HomePage() {
                   : 'inline-flex w-fit rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-600';
 
                 return (
-                  <div key={`${item.program}-${item.day}-${index}`} className="grid gap-3 border-b border-slate-200/70 px-6 py-5 md:grid-cols-[1.3fr_repeat(5,minmax(0,1fr))] md:items-center md:gap-4">
-                    <div>
-                      <p className="font-mono text-lg font-semibold text-slate-950">{item.program}</p>
+                  <div key={`${item.program}-${item.day}-${index}`} className="border-b border-slate-200/70 px-4 py-5 last:border-b-0 md:grid md:grid-cols-[1.3fr_repeat(5,minmax(0,1fr))] md:items-center md:gap-4 md:px-6">
+                    <div className="grid gap-3 md:hidden">
+                      <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Program</p>
+                        <p className="mt-2 font-mono text-lg font-semibold text-slate-950">{item.program}</p>
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Day</p>
+                          <p className="mt-2 text-sm leading-5 text-slate-700">{item.day}</p>
+                        </div>
+                        <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Time</p>
+                          <p className="mt-2 text-sm leading-5 text-slate-700">{item.time}</p>
+                        </div>
+                        <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Place</p>
+                          <p className="mt-2 text-sm leading-5 text-slate-700">{item.place}</p>
+                        </div>
+                        <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Instructor</p>
+                          <p className="mt-2 text-sm leading-5 text-slate-700">{item.instructor}</p>
+                        </div>
+                        <div className="col-span-2 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Availability</p>
+                          <div className="mt-2">
+                            {item.availabilityHref ? (
+                              <Link className={availabilityClassName} href={item.availabilityHref}>
+                                {item.availability}
+                              </Link>
+                            ) : (
+                              <p className={availabilityClassName}>{item.availability}</p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm text-slate-600">{item.day}</p>
-                    <p className="text-sm text-slate-600">{item.time}</p>
-                    <p className="text-sm text-slate-600">{item.place}</p>
-                    <p className="text-sm text-slate-600">{item.instructor}</p>
-                    {item.availabilityHref ? (
-                      <Link className={availabilityClassName} href={item.availabilityHref}>
-                        {item.availability}
-                      </Link>
-                    ) : (
-                      <p className={availabilityClassName}>{item.availability}</p>
-                    )}
+                    <div className="hidden md:contents">
+                      <div>
+                        <p className="font-mono text-lg font-semibold text-slate-950">{item.program}</p>
+                      </div>
+                      <p className="text-sm text-slate-600">{item.day}</p>
+                      <p className="text-sm text-slate-600">{item.time}</p>
+                      <p className="text-sm text-slate-600">{item.place}</p>
+                      <p className="text-sm text-slate-600">{item.instructor}</p>
+                      {item.availabilityHref ? (
+                        <Link className={availabilityClassName} href={item.availabilityHref}>
+                          {item.availability}
+                        </Link>
+                      ) : (
+                        <p className={availabilityClassName}>{item.availability}</p>
+                      )}
+                    </div>
                   </div>
                 );
               })}
@@ -281,30 +329,33 @@ export default function HomePage() {
               title={galleryContent.sectionIntro.title}
             />
           </Reveal>
-          <div className="layout-grid layout-grid-cols phone-scroll-row mt-10" style={getLayoutBoxStyle(homeGalleryPreviewLayout.grid)}>
-            {galleryContent.events.slice(0, 3).map((event, index) => (
-              <Reveal key={event.id} className="phone-scroll-card" delay={index * 0.08}>
-                <Link className="group block" href={`/gallery/${event.id}`}>
-                  <article className="layout-radius premium-card interactive-card flex h-full flex-col overflow-hidden" style={getLayoutBoxStyle(homeGalleryPreviewLayout.card)}>
-                    <div className="relative aspect-[16/11] overflow-hidden">
-                      <Image alt={event.title} className="object-cover transition duration-500 group-hover:scale-[1.03]" fill sizes="(max-width: 1024px) 100vw, 33vw" src={event.coverImage} />
-                    </div>
-                    <div className="layout-card-size flex h-full flex-col gap-3" style={getLayoutBoxStyle(homeGalleryPreviewLayout.cardSecondary)}>
-                      <div className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
-                        <span>{event.date}</span>
-                        {event.location ? <span>{event.location}</span> : null}
+          <div className="relative mt-4 sm:mt-10">
+            <MobileScrollIndicator targetId="home-gallery-scroll" />
+            <div className="layout-grid layout-grid-cols phone-scroll-row" id="home-gallery-scroll" style={getLayoutBoxStyle(homeGalleryPreviewLayout.grid)}>
+              {galleryContent.events.slice(0, 3).map((event, index) => (
+                <Reveal key={event.id} className="phone-scroll-card" delay={index * 0.08}>
+                  <Link className="group block" href={`/gallery/${event.id}`}>
+                    <article className="layout-radius premium-card interactive-card flex h-full flex-col overflow-hidden" style={getLayoutBoxStyle(homeGalleryPreviewLayout.card)}>
+                      <div className="relative aspect-[16/11] overflow-hidden">
+                        <Image alt={event.title} className="object-cover transition duration-500 group-hover:scale-[1.03]" fill sizes="(max-width: 1024px) 100vw, 33vw" src={event.coverImage} />
                       </div>
-                      <h3 className="font-mono text-2xl font-semibold text-slate-950">{event.title}</h3>
-                      <p className="flex-1 text-sm leading-6 text-slate-600">{event.description}</p>
-                      <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
-                        {siteContent.sectionLabels.gallery}
-                        <ArrowRight className="size-4" aria-hidden="true" />
-                      </span>
-                    </div>
-                  </article>
-                </Link>
-              </Reveal>
-            ))}
+                      <div className="layout-card-size flex h-full flex-col gap-3" style={getLayoutBoxStyle(homeGalleryPreviewLayout.cardSecondary)}>
+                        <div className="flex flex-wrap items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-slate-400">
+                          <span>{event.date}</span>
+                          {event.location ? <span>{event.location}</span> : null}
+                        </div>
+                        <h3 className="font-mono text-2xl font-semibold text-slate-950">{event.title}</h3>
+                        <p className="flex-1 text-sm leading-6 text-slate-600">{event.description}</p>
+                        <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-[#2563EB]">
+                          {siteContent.sectionLabels.gallery}
+                          <ArrowRight className="size-4" aria-hidden="true" />
+                        </span>
+                      </div>
+                    </article>
+                  </Link>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
@@ -318,21 +369,24 @@ export default function HomePage() {
               title={testimonialsContent.sectionIntro.title}
             />
           </Reveal>
-          <div className="layout-grid layout-grid-cols phone-scroll-row mt-10" style={getLayoutBoxStyle(homeTestimonialsLayout.grid)}>
-            {testimonialsContent.items.map((testimonial, index) => (
-              <Reveal key={`${testimonial.name}-${testimonial.role}`} className="phone-scroll-card" delay={index * 0.08}>
-                <article className="layout-card-size premium-card interactive-card flex h-full flex-col" style={getLayoutBoxStyle(homeTestimonialsLayout.card)}>
-                  <p className="flex-1 text-lg leading-8 text-slate-700">&ldquo;{testimonial.quote}&rdquo;</p>
-                  <div className="mt-6 border-t border-slate-200 pt-5">
-                    <p className="font-mono text-sm font-semibold text-slate-950">{testimonial.name}</p>
-                    <p className="mt-1 text-sm text-slate-500">{testimonial.role}</p>
-                    <p className="mt-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
-                      {testimonial.type}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
+          <div className="relative mt-4 sm:mt-10">
+            <MobileScrollIndicator targetId="home-testimonials-scroll" />
+            <div className="layout-grid layout-grid-cols phone-scroll-row" id="home-testimonials-scroll" style={getLayoutBoxStyle(homeTestimonialsLayout.grid)}>
+              {testimonialsContent.items.map((testimonial, index) => (
+                <Reveal key={`${testimonial.name}-${testimonial.role}`} className="phone-scroll-card" delay={index * 0.08}>
+                  <article className="layout-card-size premium-card interactive-card flex h-full flex-col" style={getLayoutBoxStyle(homeTestimonialsLayout.card)}>
+                    <p className="flex-1 text-lg leading-8 text-slate-700">&ldquo;{testimonial.quote}&rdquo;</p>
+                    <div className="mt-6 border-t border-slate-200 pt-5">
+                      <p className="font-mono text-sm font-semibold text-slate-950">{testimonial.name}</p>
+                      <p className="mt-1 text-sm text-slate-500">{testimonial.role}</p>
+                      <p className="mt-3 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600">
+                        {testimonial.type}
+                      </p>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

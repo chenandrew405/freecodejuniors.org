@@ -15,7 +15,7 @@
       "day": "September 20, Sunday",
       "time": "2:00-3:00 PM",
       "place": "NSU Alvin Sherman Library",
-      "instructor": "N/a",
+      "instructor": "N/A",
       "availability": "Join Group",
       "availabilityHref": "/join-group"
     },
@@ -24,41 +24,63 @@
       "day": "September 20, Sunday",
       "time": "2:00-3:00 PM",
       "place": "NSU Alvin Sherman Library",
-      "instructor": "N/a",
+      "instructor": "N/A",
       "availability": "Join Group",
       "availabilityHref": "/join-group"
     },
     {
-      "program": "Coming Soon",
-      "day": "Coming Soon",
-      "time": "Coming Soon",
-      "place": "Coming Soon",
-      "instructor": "Coming Soon",
-      "availability": "Coming Soon"
+      "program": "Scratch Fundamentals: Beginner",
+      "day": "October 25, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
     },
     {
-      "program": "Coming Soon",
-      "day": "Coming Soon",
-      "time": "Coming Soon",
-      "place": "Coming Soon",
-      "instructor": "Coming Soon",
-      "availability": "Coming Soon"
+      "program": "Python Fundamentals: Beginner",
+      "day": "October 25, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
     },
     {
-      "program": "Coming Soon",
-      "day": "Coming Soon",
-      "time": "Coming Soon",
-      "place": "Coming Soon",
-      "instructor": "Coming Soon",
-      "availability": "Coming Soon"
+      "program": "Scratch Fundamentals: Beginner",
+      "day": "November 22, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
     },
     {
-      "program": "Coming Soon",
-      "day": "Coming Soon",
-      "time": "Coming Soon",
-      "place": "Coming Soon",
-      "instructor": "Coming Soon",
-      "availability": "Coming Soon"
+      "program": "Python Fundamentals: Beginner",
+      "day": "November 22, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
+    },
+    {
+      "program": "Scratch Fundamentals: Beginner",
+      "day": "December 20, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
+    },
+    {
+      "program": "Python Fundamentals: Beginner",
+      "day": "December 20, Sunday",
+      "time": "2:00-3:00 PM",
+      "place": "NSU Alvin Sherman Library",
+      "instructor": "N/A",
+      "availability": "Join Group",
+      "availabilityHref": "/join-group"
     }
   ],
   "callout": {

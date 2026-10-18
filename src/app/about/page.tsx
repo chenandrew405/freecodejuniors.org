@@ -294,64 +294,75 @@ export default function AboutPage() {
                     </article>
                   </Reveal>
                   <div className="h-8 w-px bg-slate-300" />
-                  <div className="flex w-full justify-center">
+                  <div className={`relative w-full ${teacherAssistants.length > 1 ? 'max-w-4xl' : 'max-w-lg'}`}>
+                    {teacherAssistants.length > 1 ? (
+                      <>
+                        <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-slate-300 md:block" />
+                        <div className="absolute left-1/2 top-0 hidden h-px w-[min(100%,28rem)] -translate-x-1/2 bg-slate-300 md:block" />
+                      </>
+                    ) : null}
+                    <div className={`grid w-full gap-6 pt-6 ${teacherAssistants.length > 1 ? 'md:grid-cols-2' : ''}`} style={getLayoutBoxStyle(aboutTeamLayout.grid)}>
                     {teacherAssistants.map((member, index) => {
                       const memberId = getTeamMemberId(member.name);
                       const hasContact = Boolean(member.email || member.phone);
 
                       return (
-                        <Reveal key={member.name} className="h-full w-full max-w-lg" delay={0.3 + index * 0.08}>
-                          <article className="layout-radius premium-card h-full w-full overflow-hidden" style={getLayoutBoxStyle(aboutTeamLayout.card)}>
-                            <div className="layout-card-size space-y-5 text-center" style={getLayoutBoxStyle(aboutTeamLayout.cardSecondary)}>
-                              <div className="space-y-3">
-                                <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#2563EB]">{member.role}</p>
-                                <h3 className="font-mono text-2xl font-semibold text-slate-950">{member.name}</h3>
-                              </div>
-
-                              <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-5">
-                                <Link className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-[#2563EB]" href={`/about/${memberId}`}>
-                                  Read More
-                                  <ArrowUpRight className="size-4" aria-hidden="true" />
-                                </Link>
-                              </div>
-
-                              {hasContact ? (
-                                <div className="grid gap-3 rounded-[1.25rem] border border-slate-200/80 bg-slate-50/70 p-4 text-left text-sm text-slate-600">
-                                  {member.email ? (
-                                    <div className="flex items-center gap-3">
-                                      <span className="inline-flex size-9 items-center justify-center rounded-full bg-white text-[#2563EB] shadow-sm">
-                                        <Mail className="size-4" aria-hidden="true" />
-                                      </span>
-                                      {member.email.includes('@') ? (
-                                        <Link className="transition hover:text-[#2563EB]" href={`mailto:${member.email}`}>
-                                          {member.email}
-                                        </Link>
-                                      ) : (
-                                        <span>{member.email}</span>
-                                      )}
-                                    </div>
-                                  ) : null}
-                                  {member.phone ? (
-                                    <div className="flex items-center gap-3">
-                                      <span className="inline-flex size-9 items-center justify-center rounded-full bg-white text-[#2563EB] shadow-sm">
-                                        <Phone className="size-4" aria-hidden="true" />
-                                      </span>
-                                      {!member.phone.toLowerCase().includes('coming soon') ? (
-                                        <Link className="transition hover:text-[#2563EB]" href={`tel:${member.phone}`}>
-                                          {member.phone}
-                                        </Link>
-                                      ) : (
-                                        <span>{member.phone}</span>
-                                      )}
-                                    </div>
-                                  ) : null}
+                        <Reveal key={member.name} className="h-full" delay={0.3 + index * 0.08}>
+                          <div className="flex h-full flex-col items-center">
+                            {teacherAssistants.length > 1 ? <div className="hidden h-6 w-px bg-slate-300 md:block" /> : null}
+                            <article className="layout-radius premium-card h-full w-full overflow-hidden" style={getLayoutBoxStyle(aboutTeamLayout.card)}>
+                              <div className="layout-card-size space-y-5 text-center" style={getLayoutBoxStyle(aboutTeamLayout.cardSecondary)}>
+                                <div className="space-y-3">
+                                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#2563EB]">{member.role}</p>
+                                  <h3 className="font-mono text-2xl font-semibold text-slate-950">{member.name}</h3>
                                 </div>
-                              ) : null}
-                            </div>
-                          </article>
+
+                                <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-5">
+                                  <Link className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-[#2563EB]" href={`/about/${memberId}`}>
+                                    Read More
+                                    <ArrowUpRight className="size-4" aria-hidden="true" />
+                                  </Link>
+                                </div>
+
+                                {hasContact ? (
+                                  <div className="grid gap-3 rounded-[1.25rem] border border-slate-200/80 bg-slate-50/70 p-4 text-left text-sm text-slate-600">
+                                    {member.email ? (
+                                      <div className="flex items-center gap-3">
+                                        <span className="inline-flex size-9 items-center justify-center rounded-full bg-white text-[#2563EB] shadow-sm">
+                                          <Mail className="size-4" aria-hidden="true" />
+                                        </span>
+                                        {member.email.includes('@') ? (
+                                          <Link className="transition hover:text-[#2563EB]" href={`mailto:${member.email}`}>
+                                            {member.email}
+                                          </Link>
+                                        ) : (
+                                          <span>{member.email}</span>
+                                        )}
+                                      </div>
+                                    ) : null}
+                                    {member.phone ? (
+                                      <div className="flex items-center gap-3">
+                                        <span className="inline-flex size-9 items-center justify-center rounded-full bg-white text-[#2563EB] shadow-sm">
+                                          <Phone className="size-4" aria-hidden="true" />
+                                        </span>
+                                        {!member.phone.toLowerCase().includes('coming soon') ? (
+                                          <Link className="transition hover:text-[#2563EB]" href={`tel:${member.phone}`}>
+                                            {member.phone}
+                                          </Link>
+                                        ) : (
+                                          <span>{member.phone}</span>
+                                        )}
+                                      </div>
+                                    ) : null}
+                                  </div>
+                                ) : null}
+                              </div>
+                            </article>
+                          </div>
                         </Reveal>
                       );
                     })}
+                    </div>
                   </div>
                 </>
               ) : null}

@@ -43,19 +43,57 @@ export default function SchedulePage() {
                 : 'inline-flex w-fit rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-600';
 
               return (
-                <div key={`${item.program}-${item.day}-${index}`} className="grid gap-3 border-b border-slate-200/70 px-6 py-5 md:grid-cols-[1.3fr_repeat(5,minmax(0,1fr))] md:items-center md:gap-4 last:border-b-0">
-                  <p className="font-mono text-lg font-semibold text-slate-950">{item.program}</p>
-                  <p className="text-sm text-slate-600">{item.day}</p>
-                  <p className="text-sm text-slate-600">{item.time}</p>
-                  <p className="text-sm text-slate-600">{item.place}</p>
-                  <p className="text-sm text-slate-600">{item.instructor}</p>
-                  {item.availabilityHref ? (
-                    <Link className={availabilityClassName} href={item.availabilityHref}>
-                      {item.availability}
-                    </Link>
-                  ) : (
-                    <p className={availabilityClassName}>{item.availability}</p>
-                  )}
+                <div key={`${item.program}-${item.day}-${index}`} className="border-b border-slate-200/70 px-4 py-5 last:border-b-0 md:grid md:grid-cols-[1.3fr_repeat(5,minmax(0,1fr))] md:items-center md:gap-4 md:px-6">
+                  <div className="grid gap-3 md:hidden">
+                    <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-4">
+                      <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Program</p>
+                      <p className="mt-2 font-mono text-lg font-semibold text-slate-950">{item.program}</p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Day</p>
+                        <p className="mt-2 text-sm leading-5 text-slate-700">{item.day}</p>
+                      </div>
+                      <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Time</p>
+                        <p className="mt-2 text-sm leading-5 text-slate-700">{item.time}</p>
+                      </div>
+                      <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Place</p>
+                        <p className="mt-2 text-sm leading-5 text-slate-700">{item.place}</p>
+                      </div>
+                      <div className="rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Instructor</p>
+                        <p className="mt-2 text-sm leading-5 text-slate-700">{item.instructor}</p>
+                      </div>
+                      <div className="col-span-2 rounded-[1.1rem] border border-slate-200/80 bg-white/90 p-4">
+                        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400">Availability</p>
+                        <div className="mt-2">
+                          {item.availabilityHref ? (
+                            <Link className={availabilityClassName} href={item.availabilityHref}>
+                              {item.availability}
+                            </Link>
+                          ) : (
+                            <p className={availabilityClassName}>{item.availability}</p>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="hidden md:contents">
+                    <p className="font-mono text-lg font-semibold text-slate-950">{item.program}</p>
+                    <p className="text-sm text-slate-600">{item.day}</p>
+                    <p className="text-sm text-slate-600">{item.time}</p>
+                    <p className="text-sm text-slate-600">{item.place}</p>
+                    <p className="text-sm text-slate-600">{item.instructor}</p>
+                    {item.availabilityHref ? (
+                      <Link className={availabilityClassName} href={item.availabilityHref}>
+                        {item.availability}
+                      </Link>
+                    ) : (
+                      <p className={availabilityClassName}>{item.availability}</p>
+                    )}
+                  </div>
                 </div>
               );
             })}
@@ -77,5 +115,5 @@ export default function SchedulePage() {
         </Container>
       </section>
     </main>
-  );
+  )
 }

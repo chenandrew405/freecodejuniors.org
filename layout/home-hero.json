@@ -99,9 +99,9 @@
   },
   "title": {
     "fontSize": {
-      "mobile": "3.1rem",
-      "tablet": "4rem",
-      "desktop": "4.85rem"
+      "mobile": "2.5rem",
+      "tablet": "3.15rem",
+      "desktop": "3.9rem"
     },
     "lineHeight": {
       "mobile": "1.05",

@@ -18,7 +18,7 @@
       "recommendedAge": "5+",
       "duration": "Current program",
       "skillLevel": "Beginner",
-      "image": "/images/workshop-1.jpg",
+      "image": "/gallery/august-16-session/6.jpg",
       "badgeImage": "/images/scratch-logo-transparent.png"
     },
     {
@@ -29,9 +29,8 @@
       "recommendedAge": "Contact Us!",
       "duration": "Current program",
       "skillLevel": "Beginner",
-      "image": "/images/poster.jpg",
-      "badgeImage": "/images/python-logo.webp",
-      "imagePlaceholderText": "Available Now!"
+      "image": "/gallery/september-20-session/6.jpg",
+      "badgeImage": "/images/python-logo.webp"
     }
   ]
 }

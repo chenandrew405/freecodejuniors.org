@@ -30,12 +30,12 @@
   },
   "storyImages": [
     {
-      "src": "/images/classroom.jpg",
-      "alt": "A classroom prepared for collaborative computer science learning."
+      "src": "/gallery/september-20-session/10.jpg",
+      "alt": "Students working together around laptops during a Free Code Juniors session."
     },
     {
-      "src": "/images/about-why-nonprofit.jpg",
-      "alt": "Students and volunteers gathered during a Free Code Juniors session."
+      "src": "/gallery/september-20-session/5.jpg",
+      "alt": "Students and instructors gathered together for a Free Code Juniors group photo."
     }
   ],
   "team": {
@@ -91,6 +91,14 @@
         "profileRole": "Teaching Assistant",
         "bio": "Julie attends American Heritage School and enjoys community service and public speaking. She has hosted the 2026 Overseas Chinese Spring Festival Gala and serves as a volunteer emcee for music performances at local senior living communities.\n\nOutside of volunteering, Julie enjoys swimming, cheerleading, and horseback riding.",
         "image": "/images/julie-kong.jpg",
+        "imagePosition": "center top"
+      },
+      {
+        "name": "Adriano Carvalho",
+        "role": "Teaching Assistant",
+        "profileRole": "Teaching Assistant",
+        "bio": "Adriano Carvalho is a 15-year-old sophomore. He is passionate about technology, coding, and using his creativity to help younger students discover new skills. He enjoys collaborating with others and participating in student-led community initiatives.\n\nBeyond technology, Adriano serves as Principal Cellist of both the Florida Youth Orchestra (FYO) Symphony Orchestra and his school orchestra. He also enjoys composing music, playing piano, ice hockey, and flying airplanes.",
+        "image": "/images/adriano-carvalho.jpg",
         "imagePosition": "center top"
       }
     ]
