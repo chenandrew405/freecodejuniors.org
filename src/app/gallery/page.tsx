@@ -25,6 +25,7 @@ export default function GalleryPage() {
               description={galleryContent.sectionIntro.description}
               eyebrow={galleryContent.sectionIntro.eyebrow}
               title={galleryContent.sectionIntro.title}
+
             />
           </Reveal>
 

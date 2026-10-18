@@ -15,6 +15,7 @@
       "title": "May 25 Session",
       "description": "An early FCJ session focused on warm introductions, collaborative learning, and helping students settle into the creative rhythm of class.",
       "date": "May 25",
+      "sortDate": "2026-05-25",
       "location": "Session Gallery",
       "coverImage": "/gallery/may-25-session/cover.jpg",
       "images": [
@@ -51,6 +52,7 @@
       "title": "June 25 Session",
       "description": "The June session captured a fuller FCJ lesson in motion, with live demonstrations, student engagement, and visible momentum across the room.",
       "date": "June 25",
+      "sortDate": "2026-06-25",
       "location": "Session Gallery",
       "coverImage": "/gallery/june-25-session/cover.jpg",
       "images": [
@@ -118,6 +120,7 @@
       "title": "July 26 Session",
       "description": "The third FCJ meeting shows clear growth across the program, with more instructors supporting the room, more kids participating, and a stronger sense of shared momentum around the work.",
       "date": "July 26",
+      "sortDate": "2026-07-26",
       "location": "Session Gallery",
       "coverImage": "/gallery/july-26-session/cover.jpg",
       "images": [
@@ -319,6 +322,150 @@
           "caption": "A short classroom clip capturing students gathered around the table while the lesson is guided live in the room."
         }
       ]
+    },
+    {
+      "id": "august-16-session",
+      "title": "August 16 Session",
+      "description": "The fourth FCJ meeting carried the summer momentum forward, with students taking on new coding steps while mentors kept the room collaborative, focused, and encouraging.",
+      "date": "August 16",
+      "sortDate": "2026-08-16",
+      "location": "Session Gallery",
+      "coverImage": "/gallery/august-16-session/cover.jpg",
+      "images": [
+        {
+          "src": "/gallery/august-16-session/1.jpg",
+          "alt": "August 16 Free Code Juniors session photo 1.",
+          "caption": "The fourth meeting opened with students ready to jump back into the work together."
+        },
+        {
+          "src": "/gallery/august-16-session/2.jpg",
+          "alt": "August 16 Free Code Juniors session photo 2.",
+          "caption": "Mentors stayed close by as students moved through the lesson with growing confidence."
+        },
+        {
+          "src": "/gallery/august-16-session/3.jpg",
+          "alt": "August 16 Free Code Juniors session photo 3.",
+          "caption": "This part of the session reflects the steady, hands-on rhythm FCJ keeps building each month."
+        },
+        {
+          "src": "/gallery/august-16-session/4.jpg",
+          "alt": "August 16 Free Code Juniors session photo 4.",
+          "caption": "Students were able to focus on new steps while still learning alongside one another."
+        },
+        {
+          "src": "/gallery/august-16-session/5.jpg",
+          "alt": "August 16 Free Code Juniors session photo 5.",
+          "caption": "The room stayed collaborative as instructors helped students turn questions into progress."
+        },
+        {
+          "src": "/gallery/august-16-session/6.jpg",
+          "alt": "August 16 Free Code Juniors session photo 6.",
+          "caption": "By the fourth session, students were settling into the routine with more independence and ease."
+        },
+        {
+          "src": "/gallery/august-16-session/7.jpg",
+          "alt": "August 16 Free Code Juniors session photo 7.",
+          "caption": "Moments like this show how FCJ balances individual attention with a shared classroom energy."
+        },
+        {
+          "src": "/gallery/august-16-session/8.jpg",
+          "alt": "August 16 Free Code Juniors session photo 8.",
+          "caption": "Students kept building confidence as the lesson moved from explanation into practice."
+        },
+        {
+          "src": "/gallery/august-16-session/9.jpg",
+          "alt": "August 16 Free Code Juniors session photo 9.",
+          "caption": "The fourth meeting captured a classroom that felt focused, welcoming, and ready for more growth."
+        }
+      ],
+      "videos": []
+    },
+    {
+      "id": "september-20-session",
+      "title": "September 20 Session",
+      "description": "The fifth FCJ meeting shows another step forward for the program, with more classroom moments captured across the day and a stronger sense of student confidence and participation.",
+      "date": "September 20",
+      "sortDate": "2026-09-20",
+      "location": "Session Gallery",
+      "coverImage": "/gallery/september-20-session/cover.jpg",
+      "images": [
+        {
+          "src": "/gallery/september-20-session/1.jpg",
+          "alt": "September 20 Free Code Juniors session photo 1.",
+          "caption": "The fifth meeting opened with the same welcoming energy that has become part of the FCJ classroom."
+        },
+        {
+          "src": "/gallery/september-20-session/2.jpg",
+          "alt": "September 20 Free Code Juniors session photo 2.",
+          "caption": "Students followed along closely while mentors helped keep the lesson approachable and clear."
+        },
+        {
+          "src": "/gallery/september-20-session/3.jpg",
+          "alt": "September 20 Free Code Juniors session photo 3.",
+          "caption": "This session highlights how much more comfortable students have become working through each step."
+        },
+        {
+          "src": "/gallery/september-20-session/4.jpg",
+          "alt": "September 20 Free Code Juniors session photo 4.",
+          "caption": "The room stayed active and collaborative as students built, listened, and asked questions in real time."
+        },
+        {
+          "src": "/gallery/september-20-session/5.jpg",
+          "alt": "September 20 Free Code Juniors session photo 5.",
+          "caption": "Mentors continued giving one-on-one support so students could keep moving without feeling stuck."
+        },
+        {
+          "src": "/gallery/september-20-session/6.jpg",
+          "alt": "September 20 Free Code Juniors session photo 6.",
+          "caption": "By September, the classroom rhythm felt more established and student participation felt stronger."
+        },
+        {
+          "src": "/gallery/september-20-session/7.jpg",
+          "alt": "September 20 Free Code Juniors session photo 7.",
+          "caption": "Students were able to explore the lesson at their own pace while still staying part of the shared group work."
+        },
+        {
+          "src": "/gallery/september-20-session/8.jpg",
+          "alt": "September 20 Free Code Juniors session photo 8.",
+          "caption": "This moment reflects the steady focus and classroom confidence the program has been building over time."
+        },
+        {
+          "src": "/gallery/september-20-session/9.jpg",
+          "alt": "September 20 Free Code Juniors session photo 9.",
+          "caption": "The fifth meeting shows students engaging more directly with the work and with the people around them."
+        },
+        {
+          "src": "/gallery/september-20-session/10.jpg",
+          "alt": "September 20 Free Code Juniors session photo 10.",
+          "caption": "Support stayed close at hand, helping the lesson feel encouraging even when students hit new challenges."
+        },
+        {
+          "src": "/gallery/september-20-session/11.jpg",
+          "alt": "September 20 Free Code Juniors session photo 11.",
+          "caption": "The classroom felt fuller and more settled, with students visibly taking greater ownership of their progress."
+        },
+        {
+          "src": "/gallery/september-20-session/12.jpg",
+          "alt": "September 20 Free Code Juniors session photo 12.",
+          "caption": "Students kept moving between listening, trying, and asking questions without losing momentum."
+        },
+        {
+          "src": "/gallery/september-20-session/13.jpg",
+          "alt": "September 20 Free Code Juniors session photo 13.",
+          "caption": "This session gallery captures the mix of concentration, curiosity, and encouragement that defines FCJ."
+        },
+        {
+          "src": "/gallery/september-20-session/14.jpg",
+          "alt": "September 20 Free Code Juniors session photo 14.",
+          "caption": "The fifth meeting continued showing how structure and personal support can grow side by side."
+        },
+        {
+          "src": "/gallery/september-20-session/15.jpg",
+          "alt": "September 20 Free Code Juniors session photo 15.",
+          "caption": "By the end of the September session, the room reflected the stronger momentum the program has built across the season."
+        }
+      ],
+      "videos": []
     }
   ]
 }

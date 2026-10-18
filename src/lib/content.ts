@@ -26,7 +26,15 @@ export const heroContent = heroSchema.parse(heroData);
 export const aboutContent = aboutSchema.parse(aboutData);
 export const programsContent = programsSchema.parse(programsData);
 export const scheduleContent = scheduleSchema.parse(scheduleData);
-export const galleryContent = gallerySchema.parse(galleryData);
+const galleryContentData = gallerySchema.parse(galleryData);
+
+// Keep gallery previews and archive cards aligned to the newest session dates.
+export const galleryContent = {
+  ...galleryContentData,
+  events: [...galleryContentData.events].sort((firstEvent, secondEvent) =>
+    secondEvent.sortDate.localeCompare(firstEvent.sortDate),
+  ),
+};
 export const testimonialsContent = testimonialsSchema.parse(testimonialsData);
 export const navigationContent = navigationSchema.parse(navigationData);
 export const footerContent = footerSchema.parse(footerData);
@@ -49,7 +57,11 @@ export const getTeamMemberId = (name: string) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
 
-export const teamMembers = [...aboutContent.team.members, ...aboutContent.team.instructors, ...aboutContent.team.teacherAssistants];
+export const teamMembers = [
+  ...aboutContent.team.members,
+  ...aboutContent.team.instructors,
+  ...aboutContent.team.teacherAssistants,
+];
 
 export const getTeamMemberById = (memberId: string) =>
   teamMembers.find((member) => getTeamMemberId(member.name) === memberId);

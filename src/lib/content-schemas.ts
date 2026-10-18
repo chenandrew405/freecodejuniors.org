@@ -88,6 +88,7 @@ const galleryEventSchema: z.ZodType<GalleryEvent> = z.object({
   title: z.string().min(1),
   description: z.string().min(1),
   date: z.string().min(1),
+  sortDate: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
   location: z.string().optional(),
   coverImage: z.string().min(1),
   images: z.array(galleryImageSchema).min(1),

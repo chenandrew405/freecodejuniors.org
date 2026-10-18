@@ -29,16 +29,16 @@
   ],
   "heroImages": {
     "primary": {
-      "src": "/images/workshop-1.jpg",
-      "alt": "Students gathered around laptops during a Free Code Juniors workshop."
+      "src": "/gallery/september-20-session/9.jpg",
+      "alt": "Students gathered around laptops while an instructor presents at the front of a Free Code Juniors lesson."
     },
     "secondary": {
-      "src": "/images/team.jpg",
-      "alt": "Free Code Juniors student organizers standing beside a welcome display."
+      "src": "/gallery/september-20-session/2.jpg",
+      "alt": "An instructor leaning in to help students working together at a laptop during a Free Code Juniors session."
     },
     "tertiary": {
-      "src": "/images/poster.jpg",
-      "alt": "Free Code Juniors poster and welcome materials at an event."
+      "src": "/gallery/september-20-session/1.jpg",
+      "alt": "Students collaborating around a table while a mentor guides a Scratch activity during a Free Code Juniors session."
     }
   },
   "floatingCards": [

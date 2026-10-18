@@ -139,6 +139,7 @@ export interface GalleryEvent {
   title: string;
   description: string;
   date: string;
+  sortDate: string;
   location?: string;
   coverImage: string;
   images: GalleryImage[];
