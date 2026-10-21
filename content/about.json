@@ -70,6 +70,15 @@
         "image": "/images/leonardo-carvalho.jpg"
       },
       {
+        "name": "Adriano Carvalho",
+        "role": "Director/Instructor",
+        "profileRole": "Director | Teaching Instructor",
+        "bio": "Adriano Carvalho is a 15-year-old sophomore. He is passionate about technology, coding, and using his creativity to help younger students discover new skills. He enjoys collaborating with others and participating in student-led community initiatives.\n\nBeyond technology, Adriano serves as Principal Cellist of both the Florida Youth Orchestra (FYO) Symphony Orchestra and his school orchestra. He also enjoys composing music, playing piano, ice hockey, and flying airplanes.",
+        "image": "/images/adriano-carvalho.jpg",
+        "imagePosition": "center top",
+        "imageFit": "contain"
+      },
+      {
         "name": "Leon Rao",
         "role": "Teaching Instructor",
         "profileRole": "Teaching Instructor",
@@ -82,23 +91,24 @@
         "profileRole": "Teaching Instructor",
         "bio": "Christina Koyama attends American Heritage School in Delray Beach. She is a member of the school's Mu Alpha Theta math team and enjoys participating in mathematics competitions. She also volunteers as a math tutor at American Heritage, helping fellow students with math.\n\nChristina has completed Python programming training through X-Camp, where she developed an interest in coding and problem-solving. In her free time, she enjoys music and plays both the piano and flute. She has had the opportunity to participate in many local and international music competitions, which have been valuable learning and rewarding experiences.\n\nMost of all, Christina enjoys learning new things, meeting new people, and making friends along the way. She looks forward to exploring new opportunities and continuing to grow both academically and personally.",
         "image": "/images/christina-koyama.jpg"
+      },
+      {
+        "name": "Andres Silverio",
+        "role": "Teaching Instructor",
+        "profileRole": "Scratch Instructor",
+        "bio": "Andres Silverio is a 14-year-old ninth-grade student attending FAU High School in 2026. He has been passionate about coding since the age of five and has spent years developing his skills to solve problems through programming.\n\nNow, Andres hopes to help other students begin their own coding journeys. As a Scratch instructor at Free Code Juniors, he helps young learners discover their potential and pursue their interests in computer programming.\n\nAndres breaks down complex concepts into manageable steps, teaching students to apply logical thinking through basic rules, hands-on examples, and experimentation. By combining small building blocks of code, sprites, and creative ideas, he guides students in transforming simple concepts into complete projects and shows how individual pieces can come together to create something meaningful.",
+        "image": "/images/andres-silverio.jpg",
+        "imagePosition": "center top",
+        "imageFit": "contain"
       }
     ],
     "teacherAssistants": [
       {
-        "name": "Julie Kong",
+        "name": "Enjun Kong",
         "role": "Teaching Assistant",
         "profileRole": "Teaching Assistant",
-        "bio": "Julie attends American Heritage School and enjoys community service and public speaking. She has hosted the 2026 Overseas Chinese Spring Festival Gala and serves as a volunteer emcee for music performances at local senior living communities.\n\nOutside of volunteering, Julie enjoys swimming, cheerleading, and horseback riding.",
+        "bio": "Enjun attends American Heritage School and enjoys community service and public speaking. She has hosted the 2026 Overseas Chinese Spring Festival Gala and serves as a volunteer emcee for music performances at local senior living communities.\n\nOutside of volunteering, Enjun enjoys swimming, cheerleading, and horseback riding.",
         "image": "/images/julie-kong.jpg",
-        "imagePosition": "center top"
-      },
-      {
-        "name": "Adriano Carvalho",
-        "role": "Teaching Assistant",
-        "profileRole": "Teaching Assistant",
-        "bio": "Adriano Carvalho is a 15-year-old sophomore. He is passionate about technology, coding, and using his creativity to help younger students discover new skills. He enjoys collaborating with others and participating in student-led community initiatives.\n\nBeyond technology, Adriano serves as Principal Cellist of both the Florida Youth Orchestra (FYO) Symphony Orchestra and his school orchestra. He also enjoys composing music, playing piano, ice hockey, and flying airplanes.",
-        "image": "/images/adriano-carvalho.jpg",
         "imagePosition": "center top"
       }
     ]

@@ -44,6 +44,7 @@ const teamMemberSchema: z.ZodType<TeamMember> = z.object({
   bio: z.string().min(1),
   image: z.string().min(1).nullable().optional(),
   imagePosition: z.string().min(1).nullable().optional(),
+  imageFit: z.enum(['cover', 'contain']).nullable().optional(),
   email: z.string().min(1).nullable().optional(),
   phone: z.string().min(1).nullable().optional(),
 });

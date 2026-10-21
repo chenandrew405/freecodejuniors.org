@@ -11,8 +11,8 @@ import { aboutMissionVisionLayout, aboutTeamLayout, aboutWhyCodingLayout, aboutW
 import { getLayoutBoxStyle } from '@/lib/layout-utils';
 
 export default function AboutPage() {
-  const leadInstructor = aboutContent.team.instructors[0];
-  const supportingInstructors = aboutContent.team.instructors.slice(1);
+  const directorInstructors = aboutContent.team.instructors.slice(0, 2);
+  const supportingInstructors = aboutContent.team.instructors.slice(2);
   const teacherAssistants = aboutContent.team.teacherAssistants;
 
   return (
@@ -181,26 +181,41 @@ export default function AboutPage() {
                   })}
                 </div>
               </div>
-              {leadInstructor ? (
+              {directorInstructors.length ? (
                 <>
                   <div className="h-8 w-px bg-slate-300" />
-                  <Reveal delay={0.14}>
-                    <article className="layout-radius premium-card w-full max-w-lg overflow-hidden" style={getLayoutBoxStyle(aboutTeamLayout.card)}>
-                      <div className="layout-card-size space-y-5" style={getLayoutBoxStyle(aboutTeamLayout.cardSecondary)}>
-                        <div className="space-y-3 text-center">
-                          <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#2563EB]">{leadInstructor.role}</p>
-                          <h3 className="font-mono text-2xl font-semibold text-slate-950">{leadInstructor.name}</h3>
-                        </div>
+                  <div className={`relative w-full ${directorInstructors.length > 1 ? 'max-w-4xl' : 'max-w-lg'}`}>
+                    {directorInstructors.length > 1 ? (
+                      <>
+                        <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-slate-300 md:block" />
+                        <div className="absolute left-1/2 top-0 hidden h-px w-[min(100%,28rem)] -translate-x-1/2 bg-slate-300 md:block" />
+                      </>
+                    ) : null}
+                    <div className={`grid w-full gap-6 pt-6 ${directorInstructors.length > 1 ? 'md:grid-cols-2' : ''}`} style={getLayoutBoxStyle(aboutTeamLayout.grid)}>
+                      {directorInstructors.map((member, index) => (
+                        <Reveal key={member.name} className="h-full" delay={0.14 + index * 0.08}>
+                          <div className="flex h-full flex-col items-center">
+                            {directorInstructors.length > 1 ? <div className="hidden h-6 w-px bg-slate-300 md:block" /> : null}
+                            <article className="layout-radius premium-card h-full w-full overflow-hidden" style={getLayoutBoxStyle(aboutTeamLayout.card)}>
+                              <div className="layout-card-size space-y-5 text-center" style={getLayoutBoxStyle(aboutTeamLayout.cardSecondary)}>
+                                <div className="space-y-3">
+                                  <p className="text-sm font-medium uppercase tracking-[0.18em] text-[#2563EB]">{member.role}</p>
+                                  <h3 className="font-mono text-2xl font-semibold text-slate-950">{member.name}</h3>
+                                </div>
 
-                        <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-5 text-center">
-                          <Link className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-[#2563EB]" href={`/about/${getTeamMemberId(leadInstructor.name)}`}>
-                            Read More
-                            <ArrowUpRight className="size-4" aria-hidden="true" />
-                          </Link>
-                        </div>
-                      </div>
-                    </article>
-                  </Reveal>
+                                <div className="rounded-[1.25rem] border border-slate-200/80 bg-white/90 p-5 text-center">
+                                  <Link className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 transition hover:text-[#2563EB]" href={`/about/${getTeamMemberId(member.name)}`}>
+                                    Read More
+                                    <ArrowUpRight className="size-4" aria-hidden="true" />
+                                  </Link>
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                        </Reveal>
+                      ))}
+                    </div>
+                  </div>
                 </>
               ) : null}
 

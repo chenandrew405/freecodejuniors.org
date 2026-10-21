@@ -52,6 +52,7 @@ export interface TeamMember {
   bio: string;
   image?: string | null;
   imagePosition?: string | null;
+  imageFit?: 'cover' | 'contain' | null;
   email?: string | null;
   phone?: string | null;
 }
