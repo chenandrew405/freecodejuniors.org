@@ -49,6 +49,7 @@ export default async function AboutMemberPage({ params }: AboutMemberPageProps) 
     member.imagePosition || member.imageFit === 'contain'
       ? { objectPosition: member.imagePosition ?? 'center top' }
       : undefined;
+  const hasMemberImage = Boolean(member.image);
 
   return (
     <main>
@@ -67,12 +68,12 @@ export default async function AboutMemberPage({ params }: AboutMemberPageProps) 
           </Reveal>
 
           <Reveal>
-            <article className="layout-radius premium-card overflow-hidden lg:grid lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 lg:aspect-auto lg:h-full lg:min-h-[26rem]">
-                {member.image ? (
-                  <Image alt={member.name} className={memberImageClassName} fill sizes="(max-width: 1280px) 100vw, 45vw" src={member.image} style={memberImageStyle} />
-                ) : null}
-              </div>
+            <article className={cn('layout-radius premium-card overflow-hidden', hasMemberImage && 'lg:grid lg:grid-cols-[0.95fr_1.05fr]')}>
+              {hasMemberImage ? (
+                <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 lg:aspect-auto lg:h-full lg:min-h-[26rem]">
+                  <Image alt={member.name} className={memberImageClassName} fill sizes="(max-width: 1280px) 100vw, 45vw" src={member.image!} style={memberImageStyle} />
+                </div>
+              ) : null}
 
               <div className="layout-card-size flex h-full flex-col gap-6">
                 <div className="space-y-3">
