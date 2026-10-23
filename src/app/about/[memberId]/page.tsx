@@ -71,9 +71,7 @@ export default async function AboutMemberPage({ params }: AboutMemberPageProps) 
               <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 lg:aspect-auto lg:h-full lg:min-h-[26rem]">
                 {member.image ? (
                   <Image alt={member.name} className={memberImageClassName} fill sizes="(max-width: 1280px) 100vw, 45vw" src={member.image} style={memberImageStyle} />
-                ) : (
-                  <div className="flex h-full items-center justify-center text-center text-sm text-slate-400">Photo coming soon</div>
-                )}
+                ) : null}
               </div>
 
               <div className="layout-card-size flex h-full flex-col gap-6">
