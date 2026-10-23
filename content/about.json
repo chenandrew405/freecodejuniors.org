@@ -30,8 +30,8 @@
   },
   "storyImages": [
     {
-      "src": "/gallery/september-20-session/10.jpg",
-      "alt": "Students working together around laptops during a Free Code Juniors session."
+      "src": "/images/jacob-spector.jpg",
+      "alt": "Jacob Spector guiding students during a Free Code Juniors classroom session."
     },
     {
       "src": "/gallery/september-20-session/5.jpg",
@@ -104,11 +104,19 @@
     ],
     "teacherAssistants": [
       {
-        "name": "Enjun Kong",
+        "name": "Enjun Kang",
         "role": "Teaching Assistant",
         "profileRole": "Teaching Assistant",
         "bio": "Enjun attends American Heritage School and enjoys community service and public speaking. She has hosted the 2026 Overseas Chinese Spring Festival Gala and serves as a volunteer emcee for music performances at local senior living communities.\n\nOutside of volunteering, Enjun enjoys swimming, cheerleading, and horseback riding.",
         "image": "/images/julie-kong.jpg",
+        "imagePosition": "center top"
+      },
+      {
+        "name": "Jacob Spector",
+        "role": "Teaching Assistant",
+        "profileRole": "Teaching Assistant",
+        "bio": "Jacob Spector is a 7th-grade student at American Heritage School in Plantation, Florida, with a strong interest in problem-solving, technology, and leadership. He uses his knowledge and skills to tackle complex challenges and now hopes to help other students on their own learning journeys.\n\nJacob enjoys helping young learners realize their potential in mathematics from the basics up. He breaks down complex problems into digestible steps so students can understand foundational rules, apply logic with confidence, and build stronger problem-solving skills.",
+        "image": "/images/jacob-spector.jpg",
         "imagePosition": "center top"
       }
     ]
